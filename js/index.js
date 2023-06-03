@@ -122,9 +122,6 @@ const filterFruits = () => {
     return fruits;
   };
   return fruits.filter((item) => {
-    if (parseInt(maxWeightInput.value) < parseInt(minWeightInput.value)) {
-      [maxWeightInput.value, minWeightInput.value] = [minWeightInput.value, maxWeightInput.value];   // значения меняются местами если max меньше min
-    };
     return (item.weight >= parseInt(minWeightInput.value)) && (item.weight <= parseInt(maxWeightInput.value));
   });
 };
