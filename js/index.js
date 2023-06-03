@@ -115,13 +115,13 @@ shuffleButton.addEventListener('click', () => {
 
 // Фильтрация массива
 const filterFruits = () => {
-  if (isNaN(maxWeightInput.value) || isNaN(minWeightInput.value)) {
-    alert('Вес должен быть указан числом!')
-    maxWeightInput.value = "";
-    minWeightInput.value = "";
-    return fruits;
-  };
   return fruits.filter((item) => {
+    if (isNaN(maxWeightInput.value) || isNaN(minWeightInput.value)) {
+      alert('Вес должен быть указан числом!')
+      maxWeightInput.value = "";
+      minWeightInput.value = "";
+      return fruits;
+    };
     return (item.weight >= parseInt(minWeightInput.value)) && (item.weight <= parseInt(maxWeightInput.value));
   });
 };
