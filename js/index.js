@@ -102,7 +102,7 @@ const shuffleFruits = () => {
   // Проверка на совпадение при перемешивании
   let notShuffled = fruits.every((el, index) => el === newFruits[index]);
   if (notShuffled) {
-    alert("Не перемешано! Перемешайте ещё раз.");
+    alert("Не получилось! Перемешайте ещё раз.");
   }
 };
 
